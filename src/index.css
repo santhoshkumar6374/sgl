@@ -105,6 +105,83 @@ button {
   padding: 0 32px;
 }
 
+/* Navbar Brand Logo Typography */
+.nav-brand-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 60;
+  padding: 2px 0;
+  line-height: 1.15;
+  user-select: none;
+}
+
+.nav-brand-title {
+  font-size: 1.34rem;
+  font-weight: 800;
+  color: #0b1329;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  white-space: nowrap;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: color 0.2s ease;
+}
+
+.nav-brand-logo:hover .nav-brand-title {
+  color: #2563eb;
+}
+
+.nav-brand-subtitle {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  line-height: 1.25;
+  margin-top: 3px;
+  white-space: nowrap;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.nav-brand-tagline {
+  font-size: 0.49rem;
+  font-weight: 800;
+  color: #0b1329;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-top: 3px;
+  white-space: nowrap;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@media (max-width: 640px) {
+  .nav-brand-title {
+    font-size: 1.15rem;
+  }
+  .nav-brand-subtitle {
+    font-size: 0.54rem;
+    letter-spacing: 0.30em;
+  }
+  .nav-brand-tagline {
+    font-size: 0.42rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-brand-title {
+    font-size: 1.02rem;
+  }
+  .nav-brand-subtitle {
+    font-size: 0.48rem;
+    letter-spacing: 0.24em;
+  }
+  .nav-brand-tagline {
+    font-size: 0.38rem;
+  }
+}
+
 .nav-links-center {
   display: flex;
   align-items: center;

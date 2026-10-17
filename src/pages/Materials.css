@@ -2,6 +2,11 @@
    Materials Page Styling — Sree Ganesh Linga (SGL)
    ========================================================================== */
 
+/* Page Route Entrance Animation */
+.materials-page-container {
+  animation: fadeInScale 0.4s ease-out forwards;
+}
+
 /* Hero Section */
 .materials-hero {
   position: relative;
@@ -32,6 +37,7 @@
   z-index: 2;
 }
 
+/* Staggered entrance animations matching Products page header */
 .materials-hero-badge {
   display: inline-flex;
   align-items: center;
@@ -46,6 +52,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 20px;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .materials-hero-title {
@@ -55,6 +62,9 @@
   color: #ffffff;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
+  animation: fadeInUp 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .materials-hero-title span {
@@ -69,6 +79,9 @@
   color: #cbd5e1;
   margin-bottom: 34px;
   max-width: 580px;
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .materials-hero-actions {
@@ -76,6 +89,9 @@
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease-out 0.25s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .materials-hero-btn-primary {
@@ -123,6 +139,9 @@
 /* Hero Visual Card */
 .materials-hero-visual {
   position: relative;
+  animation: fadeInUp 0.7s ease-out 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .hero-visual-frame {
@@ -138,6 +157,20 @@
   height: 380px;
   object-fit: cover;
   display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-visual-frame:hover img {
+  transform: scale(1.03);
+}
+
+@keyframes heroBadgeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .hero-visual-floating-badge {
@@ -153,6 +186,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  animation: heroBadgeFloat 4s ease-in-out infinite;
 }
 
 .floating-badge-icon {
@@ -186,6 +220,9 @@
   border-bottom: 1px solid #e2e8f0;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   padding: 24px 0;
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .materials-metrics-grid {
@@ -199,6 +236,11 @@
   align-items: center;
   gap: 16px;
   padding: 8px 12px;
+  transition: transform 0.3s ease;
+}
+
+.metric-item:hover {
+  transform: translateY(-3px);
 }
 
 .metric-icon-wrap {
@@ -211,6 +253,13 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.metric-item:hover .metric-icon-wrap {
+  transform: scale(1.08);
+  background: #2563eb;
+  color: #ffffff;
 }
 
 .metric-value {
@@ -231,6 +280,7 @@
   text-align: center;
   max-width: 760px;
   margin: 0 auto 46px;
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .section-tag {
@@ -387,6 +437,7 @@
   padding: 8px 0;
   position: relative;
   z-index: 40;
+  animation: fadeInUp 0.45s ease-out forwards;
 }
 
 /* Custom Search Container (Compact) */
@@ -961,54 +1012,116 @@
   gap: 26px;
 }
 
-/* Material Card Component */
+/* Material Card Component with Products-style Animations & Effects */
 .material-card {
   background: #ffffff;
   border-radius: 16px;
   border: 1px solid #e2e8f0;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
   display: flex;
   flex-direction: column;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Polished Card Hover Light-Reflection (Left-to-Right diagonal light beam like Products page) */
+.material-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.7) 53%,
+    rgba(255, 255, 255, 0.45) 56%,
+    transparent 65%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 5;
+  transition: none;
 }
 
 .material-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09);
-  border-color: #cbd5e1;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 36px rgba(15, 23, 42, 0.1), 0 0 20px rgba(59, 130, 246, 0.15);
+  border-color: #93c5fd;
+}
+
+.material-card:hover::before {
+  left: 200%;
+  transition: left 1.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .material-card-img-wrap {
   position: relative;
-  height: 190px;
-  background: #0f172a;
+  width: 100%;
+  height: 200px;
+  background: #f1f5f9;
   overflow: hidden;
+}
+
+/* Moving Light Sheen across Material Image on Hover (matching ProductCard) */
+.material-card-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.material-card:hover .material-card-img-wrap::after {
+  opacity: 1;
+  transform: translateX(100%);
 }
 
 .material-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
 }
 
 .material-card:hover .material-card-img {
-  transform: scale(1.06);
+  transform: scale(1.05);
+  filter: brightness(1.02) contrast(1.02);
 }
 
 .material-category-chip {
   position: absolute;
   top: 12px;
   left: 12px;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.82);
   color: #ffffff;
+  backdrop-filter: blur(6px);
   font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .material-card-content {
@@ -1027,6 +1140,11 @@
   font-weight: 700;
   color: #0f172a;
   line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.material-card:hover .material-card-title {
+  color: #2563eb;
 }
 
 .material-card-summary {
@@ -1090,6 +1208,13 @@
   color: #2563eb;
   padding: 2px 8px;
   border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.used-in-pill:hover {
+  background: #dbeafe;
+  color: #1d4ed8;
+  transform: translateY(-1px);
 }
 
 .used-in-pill.more {
@@ -1108,12 +1233,24 @@
   padding: 9px 12px;
   font-size: 0.84rem;
   border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.material-btn-details:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
 .material-btn-enquire {
   padding: 9px 12px;
   font-size: 0.84rem;
   border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.material-btn-enquire:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
 /* Material Details Modal */
@@ -1776,13 +1913,15 @@
   border: 1px solid #e2e8f0;
   padding: 26px 24px;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
-  transition: all 0.25s ease;
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .quality-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
-  border-color: #2563eb;
+  transform: translateY(-6px);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.08), 0 0 16px rgba(59, 130, 246, 0.12);
+  border-color: #93c5fd;
 }
 
 .quality-step-num {
@@ -1791,6 +1930,13 @@
   color: #93c5fd;
   line-height: 1;
   margin-bottom: 12px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.quality-card:hover .quality-step-num {
+  color: #2563eb;
+  transform: scale(1.08);
 }
 
 .quality-card-title {

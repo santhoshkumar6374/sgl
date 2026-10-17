@@ -69,15 +69,16 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-container-full">
-        {/* Left: Official Logo and Company Name */}
-        <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '12px', zIndex: 60 }}>
-          <img
-            src="/logo.jpg"
-            alt="Sree Ganesh Lingha Logo"
-            style={{ width: '48px', height: '48px', borderRadius: '8px', objectFit: 'cover', border: '1px solid #e2e8f0', boxShadow: '0 2px 4px rgba(0,0,0,0.06)' }}
-          />
-          <span style={{ fontSize: '1.24rem', fontWeight: 800, color: '#0f172a', whiteSpace: 'nowrap' }}>
+        {/* Left: Official Brand Typography Logo */}
+        <Link to="/" className="nav-brand-logo" title="Sree Ganesh Lingha Enterprise">
+          <span className="nav-brand-title">
             Sree Ganesh Lingha
+          </span>
+          <span className="nav-brand-subtitle">
+            E N T E R P R I S E
+          </span>
+          <span className="nav-brand-tagline">
+            ALL KIND OF TRANSFER STICKERS MANUFACTURER
           </span>
         </Link>
 

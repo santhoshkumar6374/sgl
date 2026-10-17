@@ -12,7 +12,7 @@ export default function MaterialCard({ material, onSelect, onEnquire, index = 0 
     <div
       className="material-card"
       style={{
-        animationDelay: `${Math.min(index * 50, 500)}ms`
+        animationDelay: `${Math.min(index * 60, 600)}ms`
       }}
     >
       {/* Image Container with category chip */}
