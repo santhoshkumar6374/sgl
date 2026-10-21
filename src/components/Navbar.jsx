@@ -52,7 +52,7 @@ export default function Navbar() {
     { name: 'Water-Based HD Sticker', icon: Droplets, color: '#d97706' },
     { name: 'Silicon HD Sticker', icon: Layers, color: '#8b5cf6' },
     { name: 'Reflective Sticker', icon: Sun, color: '#ef4444' },
-    { name: 'Vinyl Sticker', icon: Tag, color: '#3b82f6' },
+    { name: 'Vinil Sticker', icon: Tag, color: '#3b82f6' },
     { name: 'Photo Print Sticker', icon: Image, color: '#6366f1' },
     { name: 'PVC Film Sticker', icon: Film, color: '#2563eb' },
     { name: 'Cut Colour Sticker', icon: Scissors, color: '#ea580c' },

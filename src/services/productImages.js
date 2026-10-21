@@ -84,6 +84,10 @@ export const PRODUCT_IMAGES = {
     url: '/packaging-items.png',
     alt: 'Custom boxed packaging solutions, sticker sleeves, and presentation boxes'
   },
+  'Vinil Sticker': {
+    url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+    alt: 'Premium waterproof vinyl sticker rolls and die-cut decals'
+  },
   'PVC Film Sticker': {
     url: '/pvc-film-sticker.png',
     alt: 'Premium PVC film printed sticker badges and adhesive labels'

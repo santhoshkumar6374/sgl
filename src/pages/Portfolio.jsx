@@ -1,38 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import PortfolioBox from '../components/PortfolioBox';
 import { PORTFOLIO_PROJECTS } from '../services/portfolioData';
-import { Search, Filter, Sparkles, X, MessageSquare, Check, RefreshCw } from 'lucide-react';
+import { Sparkles, X, MessageSquare, Check } from 'lucide-react';
 
 export default function Portfolio() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
   const [activeModalProject, setActiveModalProject] = useState(null);
-
-  const categories = ['All', 'Stickers', 'Labels', 'Special Finishes', 'Packaging'];
-
-  // Fast client-side filtering without network latency
-  const filteredProjects = useMemo(() => {
-    let list = [...PORTFOLIO_PROJECTS];
-
-    // Filter by Category
-    if (selectedCategory !== 'All') {
-      list = list.filter(item => item.category === selectedCategory);
-    }
-
-    // Filter by Search Query
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase().trim();
-      list = list.filter(
-        item =>
-          item.title.toLowerCase().includes(q) ||
-          item.description.toLowerCase().includes(q) ||
-          (item.tags && item.tags.some(t => t.toLowerCase().includes(q)))
-      );
-    }
-
-    return list;
-  }, [selectedCategory, searchQuery]);
 
   const phone = '919876543210';
 
@@ -54,109 +27,21 @@ export default function Portfolio() {
         </div>
       </div>
 
-      <div className="container" style={{ paddingBottom: '100px' }}>
-        {/* 2. Interactive Filter Bar & Search Box */}
-        <div className="portfolio-filter-toolbar">
-          {/* Category Tabs */}
-          <div className="portfolio-filter-pills">
-            <div className="portfolio-filter-label">
-              <Filter size={15} /> Category:
-            </div>
-            {categories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`portfolio-pill-btn ${selectedCategory === cat ? 'active' : ''}`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
-          {/* Search Box */}
-          <div className="portfolio-search-box">
-            <Search size={18} className="search-icon-fixed" />
-            <input
-              type="text"
-              placeholder="Search showcase designs, techniques..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input-field"
-              aria-label="Search portfolio"
+      <div className="container" style={{ paddingBottom: '100px', paddingTop: '28px' }}>
+        {/* Editorial Box-Based Responsive Grid */}
+        <div className="portfolio-box-grid">
+          {PORTFOLIO_PROJECTS.map((item, index) => (
+            <PortfolioBox
+              key={item.id}
+              item={item}
+              index={index}
+              onOpenModal={(proj) => setActiveModalProject(proj)}
             />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="search-clear-btn"
-                title="Clear search"
-              >
-                &times;
-              </button>
-            )}
-          </div>
+          ))}
         </div>
-
-        {/* 3. Status Bar with Results Count */}
-        <div className="results-status-bar">
-          <span className="results-count-text">
-            Displaying <strong>{filteredProjects.length}</strong> showcase boxes
-            {selectedCategory !== 'All' && <span> in <strong>{selectedCategory}</strong></span>}
-            {searchQuery && <span> matching "<strong>{searchQuery}</strong>"</span>}
-          </span>
-
-          {(selectedCategory !== 'All' || searchQuery) && (
-            <button
-              onClick={() => {
-                setSelectedCategory('All');
-                setSearchQuery('');
-              }}
-              className="reset-filters-btn"
-            >
-              <RefreshCw size={13} /> Reset Filters
-            </button>
-          )}
-        </div>
-
-        {/* 4. Empty State if no project matched */}
-        {filteredProjects.length === 0 && (
-          <div className="empty-results-card">
-            <div className="empty-icon-wrap">
-              <Search size={32} color="#94a3b8" />
-            </div>
-            <h3 style={{ fontSize: '1.3rem', color: '#0f172a', marginBottom: '8px' }}>
-              No portfolio projects found
-            </h3>
-            <p style={{ color: '#64748b', maxWidth: '460px', margin: '0 auto 20px' }}>
-              We couldn't find any showcase matching "{searchQuery}". Try searching for vinyl, foil, or selecting "All".
-            </p>
-            <button
-              onClick={() => {
-                setSelectedCategory('All');
-                setSearchQuery('');
-              }}
-              className="btn btn-primary"
-            >
-              Show All 16 Projects
-            </button>
-          </div>
-        )}
-
-        {/* 5. Editorial Box-Based Responsive Grid */}
-        {filteredProjects.length > 0 && (
-          <div className="portfolio-box-grid">
-            {filteredProjects.map((item, index) => (
-              <PortfolioBox
-                key={item.id}
-                item={item}
-                index={index}
-                onOpenModal={(proj) => setActiveModalProject(proj)}
-              />
-            ))}
-          </div>
-        )}
       </div>
 
-      {/* 6. Lightweight Project Detail Modal mounted to document.body via Portal */}
+      {/* Lightweight Project Detail Modal mounted to document.body via Portal */}
       {activeModalProject && typeof document !== 'undefined' && createPortal(
         <div
           className="modal-overlay"
