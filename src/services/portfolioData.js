@@ -86,7 +86,7 @@ export const PORTFOLIO_PROJECTS = [
     category: 'Packaging',
     featured: false,
     description: 'Custom adhesive jar labels, tamper-evident security seals, bottle wraps, and box closure stickers for consumer goods.',
-    image_url: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80',
+    image_url: '/product-packaging-labels.jpg',
     tags: ['Tamper-Evident', 'Bottle Labels', 'Box Seals']
   },
   {

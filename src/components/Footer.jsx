@@ -12,9 +12,9 @@ export default function Footer() {
           <div className="footer-brand">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
               <img
-                src="/logo.jpg"
+                src="/logo-round.png"
                 alt="Sree Ganesh Lingha Logo"
-                style={{ width: '44px', height: '44px', borderRadius: '8px', objectFit: 'cover' }}
+                style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover' }}
               />
               <h3 style={{ margin: 0, color: 'white', fontSize: '1.25rem' }}>Sree Ganesh Lingha</h3>
             </div>

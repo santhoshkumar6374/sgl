@@ -39,7 +39,7 @@ export const PRODUCTS_DATA = [
     id: 6,
     name: 'Vinil Sticker',
     description: 'Durable, waterproof outdoor-grade vinyl stickers resistant to UV fading, moisture, and scratching. Available in die-cut rolls and sheets.',
-    image_url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+    image_url: '/vinil-sticker.png',
     category: 'Stickers'
   },
   {

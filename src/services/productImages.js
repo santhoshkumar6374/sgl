@@ -26,9 +26,9 @@ export const PRODUCT_IMAGES = {
     alt: 'High-visibility retroreflective adhesive film and safety stickers'
   },
   6: {
-    // Vinyl Sticker - outdoor waterproof vinyl roll & die-cut glossy sticker badges
-    url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
-    alt: 'Premium waterproof vinyl sticker rolls and die-cut decals'
+    // Vinil Sticker - peacock wall decor vinyl decal
+    url: '/vinil-sticker.png',
+    alt: 'Peacock wall decor artistic vinyl sticker decal'
   },
   7: {
     // Photo Print Sticker - ultra-sharp full color photo quality sticker sheets
@@ -85,8 +85,8 @@ export const PRODUCT_IMAGES = {
     alt: 'Custom boxed packaging solutions, sticker sleeves, and presentation boxes'
   },
   'Vinil Sticker': {
-    url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
-    alt: 'Premium waterproof vinyl sticker rolls and die-cut decals'
+    url: '/vinil-sticker.png',
+    alt: 'Peacock wall decor artistic vinyl sticker decal'
   },
   'PVC Film Sticker': {
     url: '/pvc-film-sticker.png',

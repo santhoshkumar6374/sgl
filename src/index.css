@@ -105,16 +105,38 @@ button {
   padding: 0 32px;
 }
 
-/* Navbar Brand Logo Typography */
+/* Navbar Brand Logo with Symbol */
 .nav-brand-logo {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
   z-index: 60;
   padding: 2px 0;
-  line-height: 1.15;
   user-select: none;
+}
+
+.nav-brand-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.nav-brand-logo:hover .nav-brand-icon {
+  transform: scale(1.05);
+}
+
+.nav-brand-text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
 }
 
 .nav-brand-title {

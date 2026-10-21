@@ -71,6 +71,12 @@ export default function Navbar() {
       <div className="nav-container-full">
         {/* Left: Official Brand Typography Logo */}
         <Link to="/" className="nav-brand-logo" title="Sree Ganesh Lingha Enterprise">
+          <img
+            src="/logo-round.png"
+            alt="Sree Ganesh Lingha SGL Logo"
+            className="nav-brand-icon"
+          />
+          <div className="nav-brand-text-col">
           <span className="nav-brand-title">
             Sree Ganesh Lingha
           </span>
@@ -80,6 +86,7 @@ export default function Navbar() {
           <span className="nav-brand-tagline">
             ALL KIND OF TRANSFER STICKERS MANUFACTURER
           </span>
+          </div>
         </Link>
 
         {/* Center: Navigation Links in Exact Order: Home | About Us | Products | Materials | Portfolio | Contact Us */}
