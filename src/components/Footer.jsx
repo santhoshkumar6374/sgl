@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <MapPin size={16} color="#60a5fa" />
-                <span>Cyber City Tech Park, Chennai, India</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cyber+City+Tech+Park,+Chennai,+India" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }} title="Open location in Google Maps">Cyber City Tech Park, Chennai, India</a>
               </li>
             </ul>
           </div>

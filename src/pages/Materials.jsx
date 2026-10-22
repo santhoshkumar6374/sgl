@@ -122,8 +122,8 @@ export default function Materials() {
             <div className="materials-hero-visual">
               <div className="hero-visual-frame">
                 <img
-                  src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80"
-                  alt="Industrial textile transfer materials and polymer films production"
+                  src="/materials-hero.jpg"
+                  alt="Sree Ganesh Lingha Enterprise - Transfer Sticker Printing Manufacturing Unit"
                   loading="eager"
                 />
                 <div className="hero-visual-floating-badge">
@@ -297,7 +297,7 @@ export default function Materials() {
                 Technical Compliance & Certification Disclaimer
               </h4>
               <p className="quality-disclaimer-text">
-                Antigravity and Sree Ganesh Linga (SGL) maintain strict truth-in-advertising standards. We do not claim general OEKO-TEX® Standard 100, phthalate-free status, PVC-free composition, or organic fiber certifications unless explicitly verified with current third-party laboratory test reports for the specific client batch and substrate formulation. Customers requiring formal regulatory compliance documentation should specify required standards during the enquiry phase.
+                Sree Ganesh Lingha (SGL) maintains strict truth-in-advertising standards. We do not claim general OEKO-TEX® Standard 100, phthalate-free status, PVC-free composition, or organic fiber certifications unless explicitly verified with current third-party laboratory test reports for the specific client batch and substrate formulation. Customers requiring formal regulatory compliance documentation should specify required standards during the enquiry phase.
               </p>
             </div>
           </div>
