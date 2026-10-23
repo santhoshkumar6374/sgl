@@ -47,7 +47,7 @@ export const PRODUCT_IMAGES = {
   },
   10: {
     // Foil Sticker - shimmering metallic gold & silver foil stamped embossed stickers
-    url: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80',
+    url: '/foil-stickers.jpg',
     alt: 'Luxury metallic gold and silver foil stamped embossed stickers'
   },
   11: {
