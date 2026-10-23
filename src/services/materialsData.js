@@ -471,7 +471,7 @@ export const MATERIALS_LIST = [
     ],
     usedInProducts: [
       'Barcode & Size Stickers',
-      'Other Packaging Items'
+      'All Packaging Items'
     ],
     colorsFinishes: [
       'Semi-Gloss Super Calendered White',
@@ -737,7 +737,7 @@ export const MATERIALS_LIST = [
       'Protective cardboard interleaving sheets'
     ],
     usedInProducts: [
-      'Other Packaging Items',
+      'All Packaging Items',
       'Non-PVC Sticker'
     ],
     colorsFinishes: [
@@ -775,7 +775,7 @@ export const MATERIALS_LIST = [
       'Pallet edge protectors'
     ],
     usedInProducts: [
-      'Other Packaging Items'
+      'All Packaging Items'
     ],
     colorsFinishes: [
       'Classic Brown Kraft Outer Liner',
@@ -811,7 +811,7 @@ export const MATERIALS_LIST = [
       'Export pallet wrapping reinforcement'
     ],
     usedInProducts: [
-      'Other Packaging Items'
+      'All Packaging Items'
     ],
     colorsFinishes: [
       'Crystal Clear Transparent',
@@ -848,7 +848,7 @@ export const MATERIALS_LIST = [
       'Retail hanging display garment bags'
     ],
     usedInProducts: [
-      'Other Packaging Items',
+      'All Packaging Items',
       'Barcode & Size Stickers'
     ],
     colorsFinishes: [
@@ -1185,7 +1185,7 @@ export const MATERIAL_PRODUCT_RELATIONSHIPS = [
     materialName: 'Kraft Paper & Fluted Board',
     materialCategory: 'Packaging Materials',
     products: [
-      { name: 'Other Packaging Items', query: 'Other Packaging Items', category: 'Packaging' }
+      { name: 'All Packaging Items', query: 'All Packaging Items', category: 'Packaging' }
     ],
     relationshipDescription: 'Engineered into protective shipping cartons, eco-friendly garment wrapping paper, and protective dispatch sleeves.'
   }
