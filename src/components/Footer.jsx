@@ -31,7 +31,6 @@ export default function Footer() {
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/products">Products</Link></li>
               <li><Link to="/materials">Materials</Link></li>
-              <li><Link to="/portfolio">Portfolio</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
@@ -42,8 +41,6 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link to="/products?category=Hardware">IoT & Embedded</Link></li>
               <li><Link to="/products?category=Software">Cloud Platforms</Link></li>
-              <li><Link to="/portfolio?category=Fintech">Fintech Modernization</Link></li>
-              <li><Link to="/portfolio?category=Infrastructure">Industrial Automation</Link></li>
             </ul>
           </div>
 

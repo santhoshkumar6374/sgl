@@ -89,7 +89,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Center: Navigation Links in Exact Order: Home | About Us | Products | Materials | Portfolio | Contact Us */}
+        {/* Center: Navigation Links in Exact Order: Home | About Us | Products | Materials | Contact Us */}
         <nav className="nav-links-center">
           <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             Home
@@ -213,10 +213,6 @@ export default function Navbar() {
           {/* New Materials Page Link */}
           <NavLink to="/materials" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             Materials
-          </NavLink>
-
-          <NavLink to="/portfolio" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            Portfolio
           </NavLink>
 
           <NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
@@ -458,25 +454,6 @@ export default function Navbar() {
               >
                 <span>Materials</span>
                 <span className="badge" style={{ fontSize: '0.7rem', padding: '2px 8px' }}>Raw Substrates</span>
-              </NavLink>
-
-              <NavLink
-                to="/portfolio"
-                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
-                onClick={() => setMobileMenuOpen(false)}
-                style={{
-                  padding: '12px 14px',
-                  borderRadius: '8px',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  color: '#0f172a',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between'
-                }}
-              >
-                <span>Portfolio</span>
-                <ArrowRight size={16} color="#94a3b8" />
               </NavLink>
 
               <NavLink
