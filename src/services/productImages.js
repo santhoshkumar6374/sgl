@@ -26,7 +26,7 @@ export const PRODUCT_IMAGES = {
     alt: 'High-visibility retroreflective adhesive film and safety stickers'
   },
   6: {
-    // Vinil Sticker - peacock wall decor vinyl decal
+    // Vinyl Sticker - peacock wall decor vinyl decal
     url: '/vinil-sticker.png',
     alt: 'Peacock wall decor artistic vinyl sticker decal'
   },
@@ -84,7 +84,7 @@ export const PRODUCT_IMAGES = {
     url: '/packaging-items.png',
     alt: 'Custom boxed packaging solutions, sticker sleeves, and presentation boxes'
   },
-  'Vinil Sticker': {
+  'Vinyl Sticker': {
     url: '/vinil-sticker.png',
     alt: 'Peacock wall decor artistic vinyl sticker decal'
   },
