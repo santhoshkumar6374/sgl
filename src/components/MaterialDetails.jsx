@@ -306,7 +306,7 @@ export default function MaterialDetails({ material, onClose, onEnquire }) {
             className="btn btn-whatsapp material-action-btn"
           >
             <MessageCircle size={16} />
-            <span>WhatsApp Tech Specs</span>
+            <span>WhatsApp Enquire</span>
           </a>
 
           <button

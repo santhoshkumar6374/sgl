@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchProducts } from '../services/api';
 import ProductCard from '../components/ProductCard';
-import { Search, Filter, AlertCircle, ArrowUpDown, Sparkles, RefreshCw } from 'lucide-react';
+import { Search, Filter, AlertCircle, Sparkles, RefreshCw } from 'lucide-react';
 
 export default function Products() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -11,7 +11,6 @@ export default function Products() {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState(urlSearch);
-  const [sortBy, setSortBy] = useState('default');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -53,21 +52,8 @@ export default function Products() {
       );
     }
 
-    // Sort order
-    if (sortBy === 'name-asc') {
-      result.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortBy === 'name-desc') {
-      result.sort((a, b) => b.name.localeCompare(a.name));
-    } else if (sortBy === 'stickers-first') {
-      result.sort((a, b) => {
-        if (a.category === 'Stickers' && b.category !== 'Stickers') return -1;
-        if (a.category !== 'Stickers' && b.category === 'Stickers') return 1;
-        return a.id - b.id;
-      });
-    }
-
     return result;
-  }, [products, searchQuery, sortBy]);
+  }, [products, searchQuery]);
 
   const handleSearchChange = (e) => {
     const val = e.target.value;
@@ -142,22 +128,6 @@ export default function Products() {
               </button>
             ))}
           </div>
-
-          {/* Sort By Dropdown */}
-          <div className="sort-group">
-            <ArrowUpDown size={15} color="#64748b" />
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="sort-select-dropdown"
-              aria-label="Sort products"
-            >
-              <option value="default">Default Order</option>
-              <option value="stickers-first">Stickers First</option>
-              <option value="name-asc">Name (A to Z)</option>
-              <option value="name-desc">Name (Z to A)</option>
-            </select>
-          </div>
         </div>
 
         {/* 3. Result Count & Active Filters Indicator */}
@@ -168,12 +138,11 @@ export default function Products() {
             {searchQuery && <span> matching "<strong>{searchQuery}</strong>"</span>}
           </span>
 
-          {(selectedCategory !== 'All' || searchQuery || sortBy !== 'default') && (
+          {(selectedCategory !== 'All' || searchQuery) && (
             <button
               onClick={() => {
                 setSelectedCategory('All');
                 setSearchQuery('');
-                setSortBy('default');
                 setSearchParams({});
               }}
               className="reset-filters-btn"
