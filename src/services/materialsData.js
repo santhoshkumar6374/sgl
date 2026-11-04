@@ -67,7 +67,7 @@ export const MATERIALS_LIST = [
     name: 'PU Heat Transfer Film',
     category: 'Heat Transfer Films',
     categoryId: 'heat-transfer-films',
-    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80',
+    image: '/pu-heat-transfer-film.jpg',
     summary: 'Flexible polyurethane film engineered for garment decoration with soft hand-feel and high elasticity.',
     description: 'A premium polyurethane-based elastomeric film commonly utilized in heat-transfer decoration for sportswear, activewear, and fashion apparel. Designed for sharp plotter cutting and reliable heat activation.',
     properties: [
@@ -108,7 +108,7 @@ export const MATERIALS_LIST = [
     name: 'PET Carrier Release Liner',
     category: 'Heat Transfer Films',
     categoryId: 'heat-transfer-films',
-    image: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?auto=format&fit=crop&w=800&q=80',
+    image: '/pet-carrier-release-liner.jpg',
     summary: 'Thermally stable polyester carrier film providing precise release tension during heat-press transfer.',
     description: 'High-tensile polyethylene terephthalate (PET) carrier sheet coated with specialized release agents. Serves as the dimensional backbone for printing multi-color heat transfer stickers and hot/cold peel applications.',
     properties: [
@@ -147,7 +147,7 @@ export const MATERIALS_LIST = [
     name: 'Plotter-Cut Heat Transfer Vinyl (HTV)',
     category: 'Heat Transfer Films',
     categoryId: 'heat-transfer-films',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+    image: '/plotter-cut-htv.jpg',
     summary: 'High-opacity vinyl film engineered for sharp computer cutting, numbers, and graphic apparel lettering.',
     description: 'Versatile solid-color transfer vinyl backed with a sticky carrier film, engineered for sports jersey personalization, custom typography, and corporate apparel branding without printing plates.',
     properties: [
@@ -185,7 +185,7 @@ export const MATERIALS_LIST = [
     name: 'Reflective Transfer Materials',
     category: 'Heat Transfer Films',
     categoryId: 'heat-transfer-films',
-    image: 'https://images.unsplash.com/photo-1508873696983-2df5293cb395?auto=format&fit=crop&w=800&q=80',
+    image: '/reflective-transfer-materials.jpg',
     summary: 'Retroreflective micro-glass bead film delivering radiant illumination in low-light and night conditions.',
     description: 'Micro-prismatic glass bead technology encapsulated within heat-activated adhesive polymers. Reflects light beams directly back to light sources, dramatically enhancing wearer visibility and nighttime safety.',
     properties: [
@@ -222,7 +222,7 @@ export const MATERIALS_LIST = [
     name: 'Glitter and Metallic Foil Transfer Materials',
     category: 'Heat Transfer Films',
     categoryId: 'heat-transfer-films',
-    image: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80',
+    image: '/glitter-metallic-foil-materials.jpg',
     summary: 'Textured sparkle flake and hot-stamped metallic films engineered for luxury retail embellishments.',
     description: 'Specialty visual-effects films comprising microscopic metallic flakes and vacuum-metalized aluminum layers. Delivers shimmering, high-luster light reflection for fashion garments, boutique tags, and lifestyle packaging.',
     properties: [
@@ -262,7 +262,7 @@ export const MATERIALS_LIST = [
     name: 'Water-Based Printing Inks',
     category: 'Printing Materials',
     categoryId: 'printing-materials',
-    image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
+    image: '/water-based-printing-inks.jpg',
     summary: 'High-solids water-based emulsion inks delivering ultra-soft hand feel, breathability, and vivid color rendition.',
     description: 'Eco-conscious textile screen printing inks featuring water as the primary solvent carrier. Provides soft hand feel, superb fabric penetration, and zero heavy PVC texture on natural and blended textiles.',
     properties: [
@@ -300,7 +300,7 @@ export const MATERIALS_LIST = [
     name: 'High-Density Silicone Inks',
     category: 'Printing Materials',
     categoryId: 'printing-materials',
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80',
+    image: '/high-density-silicone-inks.jpg',
     summary: 'Two-part liquid silicone printing formulation for high-density 3D embossed tactile graphics.',
     description: 'Advanced polydimethylsiloxane-based inks specifically engineered for building three-dimensional relief emblems on performance sports fabrics. Unaffected by extreme heat, sweat, or athletic flexing.',
     properties: [
@@ -337,7 +337,7 @@ export const MATERIALS_LIST = [
     name: 'Heat-Transfer Printing Inks',
     category: 'Printing Materials',
     categoryId: 'printing-materials',
-    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+    image: '/heat-transfer-printing-inks.jpg',
     summary: 'Specialized transfer formulations for screen and offset printing onto release carriers.',
     description: 'Engineered inks tailored for printing onto PET carrier liners and release transfer papers. Developed with high pigment load and controlled tackiness to bind effortlessly with thermoplastic transfer adhesive powders.',
     properties: [
@@ -375,7 +375,7 @@ export const MATERIALS_LIST = [
     name: 'Pigments and Printing Additives',
     category: 'Printing Materials',
     categoryId: 'printing-materials',
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80',
+    image: '/pigments-printing-additives.jpg',
     summary: 'Fine organic colorants, rheology modifiers, catalysts, and crosslinking agents for high-performance ink compounding.',
     description: 'Crucial auxiliary compounding components that adjust viscosity, adhesion promoters, anti-bleed barrier qualities, and color strength to adapt ink performance to diverse textile substrates.',
     properties: [
@@ -416,7 +416,7 @@ export const MATERIALS_LIST = [
     name: 'Polyester (PET) Label Films',
     category: 'Sticker and Label Materials',
     categoryId: 'sticker-label-materials',
-    image: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80',
+    image: '/polyester-pet-label-films.jpg',
     summary: 'Tough, dimensionally stable film facestock for heavy-duty industrial asset tags, apparel seals, and outdoor stickers.',
     description: 'High-performance polyester film engineered to withstand extreme temperatures, moisture, oil, and aggressive handling without shrinking, tearing, or yellowing.',
     properties: [
@@ -454,7 +454,7 @@ export const MATERIALS_LIST = [
     name: 'Coated Paper Label Stock',
     category: 'Sticker and Label Materials',
     categoryId: 'sticker-label-materials',
-    image: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80',
+    image: '/coated-paper-label-stock.jpg',
     summary: 'Smooth machine-coated semi-gloss and woodfree paper for economical product labeling and inventory stickers.',
     description: 'High-brightness paper facestock providing excellent ink receptivity for vivid retail packaging labels, garment size markers, and fast logistics dispatch tags.',
     properties: [
@@ -492,7 +492,7 @@ export const MATERIALS_LIST = [
     name: 'Industrial Adhesives & Hot-Melts',
     category: 'Sticker and Label Materials',
     categoryId: 'sticker-label-materials',
-    image: 'https://images.unsplash.com/photo-1572375992501-4b0892d50c69?auto=format&fit=crop&w=800&q=80',
+    image: '/industrial-adhesives-hot-melts.jpg',
     summary: 'Solvent acrylic, water-borne emulsions, and thermoplastic hot-melt adhesives engineered for permanent bonding.',
     description: 'Formulated bonding chemistries tailored to adhere across demanding surfaces, from textured corrugated boxes and low-surface-energy polybags to natural textile fibers.',
     properties: [
@@ -531,7 +531,7 @@ export const MATERIALS_LIST = [
     name: 'Thermal Barcode Label Stock',
     category: 'Sticker and Label Materials',
     categoryId: 'sticker-label-materials',
-    image: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80',
+    image: '/thermal-barcode-label-stock.jpg',
     summary: 'Direct thermal and thermal-transfer printable paper and synthetic rolls for inventory and SKU barcodes.',
     description: 'Precision roll stock treated with heat-sensitive leuco dye layers or specialized thermal-transfer receptivity coatings. Designed for barcode scanners, warehouse RFID integration, and supply chain tracking.',
     properties: [
@@ -567,7 +567,7 @@ export const MATERIALS_LIST = [
     name: 'Protective Overlaminate Films',
     category: 'Sticker and Label Materials',
     categoryId: 'sticker-label-materials',
-    image: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?auto=format&fit=crop&w=800&q=80',
+    image: '/protective-overlaminate-films.jpg',
     summary: 'Transparent self-adhesive polypropylene and polyester barrier films protecting graphics from abrasions and chemicals.',
     description: 'Ultra-clear protective top films laminated over printed stickers to shield artwork against friction, solvents, weather, and UV fading while enhancing visual gloss or velvety matte elegance.',
     properties: [
@@ -607,7 +607,7 @@ export const MATERIALS_LIST = [
     name: 'Liquid Silicone Rubber (LSR) Base',
     category: 'Silicone and Specialty Materials',
     categoryId: 'silicone-specialty',
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80',
+    image: '/liquid-silicone-rubber-lsr.jpg',
     summary: 'Platinum-cure liquid silicone rubber base delivering unmatched flexibility, heat resistance, and skin safety.',
     description: 'Two-component platinum-catalyzed liquid silicone rubber engineered for precision micro-molding and heat transfer patches. Inherently inert, hypoallergenic, and impervious to weather and laundry cycles.',
     properties: [
@@ -644,7 +644,7 @@ export const MATERIALS_LIST = [
     name: 'High-Density 3D Silicone Formulations',
     category: 'Silicone and Specialty Materials',
     categoryId: 'silicone-specialty',
-    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+    image: '/hd-3d-silicone-formulations.jpg',
     summary: 'High-build thixotropic silicone pastes for sharp-edged multi-layer screen printed garment transfers.',
     description: 'Specially engineered silicone printing paste with high vertical wall-building capacity. Enables screen printers to achieve crisp 0.5mm to 2.0mm raised badges with sharp vertical 90-degree side walls.',
     properties: [
@@ -682,7 +682,7 @@ export const MATERIALS_LIST = [
     name: 'Tactile & Barrier Specialty Coatings',
     category: 'Silicone and Specialty Materials',
     categoryId: 'silicone-specialty',
-    image: 'https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=800&q=80',
+    image: '/tactile-barrier-coatings.jpg',
     summary: 'Polyurethane and acrylic coating compounds for soft-touch, anti-fray, and dye-blocking performance.',
     description: 'Functional liquid topcoats and undercoats formulated to modify the physical touch, barrier protection, and durability of garment trims, tapes, and heat transfer graphics.',
     properties: [
@@ -721,7 +721,7 @@ export const MATERIALS_LIST = [
     name: 'High-Burst Kraft Paper',
     category: 'Packaging Materials',
     categoryId: 'packaging-materials',
-    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80',
+    image: '/high-burst-kraft-paper.jpg',
     summary: 'High-burst strength unbleached natural kraft paper for eco-friendly apparel wrapping and transit sleeves.',
     description: 'Long-fiber kraft paper produced via sustainable sulfate pulping. Delivers remarkable puncture resistance, tensile stamina, and an organic aesthetic for modern garment brand packaging.',
     properties: [
@@ -759,7 +759,7 @@ export const MATERIALS_LIST = [
     name: 'Fluted Corrugated Packaging Board',
     category: 'Packaging Materials',
     categoryId: 'packaging-materials',
-    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80',
+    image: '/fluted-corrugated-packaging-board.jpg',
     summary: '3-ply and 5-ply fluted corrugated board engineered for high stacking compression and transit protection.',
     description: 'Multi-layer packaging structure consisting of fluted corrugated medium sandwiched between durable linerboards. Designed to cushion sticker rolls, label reels, and garment trims throughout global logistics.',
     properties: [
@@ -795,7 +795,7 @@ export const MATERIALS_LIST = [
     name: 'BOPP Industrial Packaging Tapes',
     category: 'Packaging Materials',
     categoryId: 'packaging-materials',
-    image: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80',
+    image: '/bopp-industrial-packaging-tapes.jpg',
     summary: 'Biaxially oriented polypropylene (BOPP) tape with aggressive pressure-sensitive adhesive for secure carton closure.',
     description: 'High-tensile packaging tape formulated for automated and manual carton sealing. Maintains reliable bonding across recycled corrugated boxes in fluctuating temperature and humidity.',
     properties: [
@@ -832,7 +832,7 @@ export const MATERIALS_LIST = [
     name: 'Protective Garment Polybags & Sleeves',
     category: 'Packaging Materials',
     categoryId: 'packaging-materials',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+    image: '/protective-garment-polybags-sleeves.jpg',
     summary: 'Virgin and recycled LDPE/PP protective sleeves safeguarding apparel trims from moisture and dust.',
     description: 'Transparent polyethylene and polypropylene bags designed with self-adhesive resealable lip closures and safety warning perforations. Keeps delicate woven labels, zippers, and trims pristine until retail use.',
     properties: [
@@ -872,7 +872,7 @@ export const MATERIALS_LIST = [
     name: 'Fine Damask Weaving Yarns',
     category: 'Garment Trim Materials',
     categoryId: 'garment-trim-materials',
-    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80',
+    image: '/fine-damask-weaving-yarns.jpg',
     summary: 'High-density micro-denier polyester filament yarns for high-definition woven brand labels and emblems.',
     description: 'Ultra-fine filament yarns engineered for jacquard loom weaving. Allows reproduction of intricate brand typography, small details, and smooth gradient shades with soft non-irritating edge selvedges.',
     properties: [
@@ -909,7 +909,7 @@ export const MATERIALS_LIST = [
     name: 'Bonded Polyester & Nylon Threads',
     category: 'Garment Trim Materials',
     categoryId: 'garment-trim-materials',
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80',
+    image: '/bonded-polyester-nylon-threads.jpg',
     summary: 'High-tenacity bonded threads engineered for heavy-duty stitching, embroidery, and zipper assembly.',
     description: 'Precision lubricated multi-filament sewing threads possessing high tensile resistance and controlled elongation. Engineered to prevent skipped stitches and needle heating on industrial sewing machines.',
     properties: [
@@ -946,7 +946,7 @@ export const MATERIALS_LIST = [
     name: 'Cotton Twill Tapes & Satin Ribbons',
     category: 'Garment Trim Materials',
     categoryId: 'garment-trim-materials',
-    image: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80',
+    image: '/cotton-twill-tapes-satin-ribbons.jpg',
     summary: 'Herringbone cotton twill tapes and single/double-faced satin ribbons for neck bindings, drawstrings, and luxury tags.',
     description: 'Densely woven textile bands engineered for comfort, structural reinforcement, and decorative appeal across casual garments, sports hoodies, and luxury retail gift wrapping.',
     properties: [
@@ -984,7 +984,7 @@ export const MATERIALS_LIST = [
     name: 'Fusible Interlinings & Heat-Seal Backings',
     category: 'Garment Trim Materials',
     categoryId: 'garment-trim-materials',
-    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80',
+    image: '/fusible-interlinings-heat-seal-backings.jpg',
     summary: 'Thermoplastic non-woven and woven adhesive backings for iron-on patches and garment collar stabilization.',
     description: 'Engineered non-woven web coated with uniform thermoplastic adhesive dots (polyamide or EVA). Allows embroideries, woven badges, and fabric labels to be permanently ironed onto garments without sewing.',
     properties: [

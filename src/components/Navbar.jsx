@@ -89,14 +89,10 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Center: Navigation Links in Exact Order: Home | About Us | Products | Materials | Contact Us */}
+        {/* Center: Navigation Links in Exact Order: Home | Products | Materials | About Us | Contact Us */}
         <nav className="nav-links-center">
           <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             Home
-          </NavLink>
-
-          <NavLink to="/about" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            About Us
           </NavLink>
 
           {/* Products Mega Dropdown */}
@@ -215,10 +211,15 @@ export default function Navbar() {
             Materials
           </NavLink>
 
+          <NavLink to="/about" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            About Us
+          </NavLink>
+
           <NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             Contact Us
           </NavLink>
         </nav>
+
 
         {/* Right Corner: Quick Call & WhatsApp Action Buttons + Mobile Hamburger */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', zIndex: 60 }}>
@@ -356,25 +357,6 @@ export default function Navbar() {
                 <ArrowRight size={16} color="#94a3b8" />
               </NavLink>
 
-              <NavLink
-                to="/about"
-                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
-                onClick={() => setMobileMenuOpen(false)}
-                style={{
-                  padding: '12px 14px',
-                  borderRadius: '8px',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  color: '#0f172a',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between'
-                }}
-              >
-                <span>About Us</span>
-                <ArrowRight size={16} color="#94a3b8" />
-              </NavLink>
-
               {/* Mobile Products Accordion */}
               <div>
                 <div
@@ -457,6 +439,25 @@ export default function Navbar() {
               </NavLink>
 
               <NavLink
+                to="/about"
+                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  padding: '12px 14px',
+                  borderRadius: '8px',
+                  fontWeight: 600,
+                  fontSize: '1rem',
+                  color: '#0f172a',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between'
+                }}
+              >
+                <span>About Us</span>
+                <ArrowRight size={16} color="#94a3b8" />
+              </NavLink>
+
+              <NavLink
                 to="/contact"
                 className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
                 onClick={() => setMobileMenuOpen(false)}
@@ -475,6 +476,7 @@ export default function Navbar() {
                 <ArrowRight size={16} color="#94a3b8" />
               </NavLink>
             </nav>
+
 
             {/* Mobile Contact Quick Actions */}
             <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid #e2e8f0', display: 'flex', gap: '10px' }}>
