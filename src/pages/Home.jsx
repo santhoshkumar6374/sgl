@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { PRODUCTS_DATA } from '../services/productsData';
 import { Link, useNavigate } from 'react-router-dom';
 import { fetchProducts } from '../services/api';
 import ProductCard from '../components/ProductCard';
@@ -9,45 +10,34 @@ export default function Home() {
   const [featuredStickers, setFeaturedStickers] = useState([]);
   const navigate = useNavigate();
 
-  // Curated hero showcase stickers matching user request
-  const heroShowcaseStickers = [
-    {
-      id: 6,
-      name: 'Vinyl Stickers',
-      tag: 'Waterproof Vinyl',
-      image: PRODUCT_IMAGES[6].url
-    },
-    {
-      id: 5,
-      name: 'Reflective Stickers',
-      tag: 'High Visibility',
-      image: PRODUCT_IMAGES[5].url
-    },
-    {
-      id: 10,
-      name: 'Foil Stickers',
-      tag: 'Metallic Stamped',
-      image: PRODUCT_IMAGES[10].url
-    },
-    {
-      id: 11,
-      name: 'Glitter Stickers',
-      tag: 'Sparkle Finish',
-      image: PRODUCT_IMAGES[11].url
-    },
-    {
-      id: 7,
-      name: 'Photo Print Stickers',
-      tag: 'Ultra-HD Graphics',
-      image: PRODUCT_IMAGES[7].url
-    },
-    {
-      id: 15,
-      name: 'Barcode Labels',
-      tag: 'Thermal Rolls',
-      image: PRODUCT_IMAGES[15].url
-    }
-  ];
+  // Dynamic hero showcase stickers - picks 6 products randomly from all products on every refresh
+  const heroShowcaseStickers = useMemo(() => {
+    const PRODUCT_TAGS = {
+      1: 'Eco-Friendly',
+      2: 'Non-Toxic HD',
+      3: 'Water-Based',
+      4: '3D Silicone',
+      5: 'High Visibility',
+      6: 'Waterproof Vinyl',
+      7: 'Ultra-HD Graphics',
+      8: 'Clear / Solid Film',
+      9: 'Plotter Cut Vinyl',
+      10: 'Metallic Stamped',
+      11: 'Sparkle Finish',
+      12: 'Woven Satin',
+      13: 'Molded Zip Chains',
+      14: 'Natural Braided',
+      15: 'Thermal Rolls',
+      16: 'Custom Packaging'
+    };
+    const shuffled = [...PRODUCTS_DATA].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 6).map((item) => ({
+      id: item.id,
+      name: item.name,
+      tag: PRODUCT_TAGS[item.id] || item.category || 'Premium Quality',
+      image: PRODUCT_IMAGES[item.id]?.url || item.image_url
+    }));
+  }, []);
 
   useEffect(() => {
     fetchProducts({ category: 'Stickers' })
